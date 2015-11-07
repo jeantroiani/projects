@@ -21,4 +21,14 @@ describe("myFunction", function () {
         expect(myFunc.stuff.length).toEqual(1);
         expect(myFunc.stuff[0]).toEqual("Testing");
     })
+
+    describe("appending strings", function() {
+        it("should be able to  append two strings", function () {
+            expect(myFunc).toBeDefined();
+        });
+        it("should append two strings", function () {
+            expect(myFunc.append("Hello", "World")).toEqual("Hello World");
+        })
+
+    })
 });

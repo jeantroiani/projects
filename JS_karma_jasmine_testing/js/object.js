@@ -10,5 +10,9 @@ NS.myFunction = {
     reset: function reset () {
         this.stuff = [];
     },
+
+    append: function append (stringA, stringB) {
+        return stringA + " " + stringB;
+    }
 };
 NS.myFunction.init();
