@@ -27,4 +27,11 @@ describe("A string calculator", function () {
         expect(stringCalc.add("2,3")).toEqual(5);
     });
 
+    it("can be called with any amount of numbers 1, 2 and 3 separated by comma and it returns the sum of them", function () {
+        expect(stringCalc.add("1,2,3")).toEqual(6);
+    });
+
+    it("can be called with any numbers separated by new lines, and returns the sum of them", function () {
+        expect(stringCalc.add("1\n2,3")).toEqual(6);
+    });
 });

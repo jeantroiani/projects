@@ -2,11 +2,16 @@
 
 class StringCalc {
 
+    stringToArray (string) {
+        return string.split(/[\n,]/g);
+        return string.split(",");
+    }
+
     add(stringInput) {
         if (stringInput == "" || stringInput == null) {
             return 0;
         } else {
-            let arrayOfNumbers = stringInput.split(",");
+            let arrayOfNumbers = this.stringToArray(stringInput);
             if (arrayOfNumbers.length == 1) {
                 return Number(stringInput[0]);
             } else {
