@@ -12,8 +12,19 @@ describe("A string calculator", function () {
     });
 
     it("can be called with one number and return same number", function () {
-        expect(stringCalc.add(1)).toEqual(1);
+        expect(stringCalc.add("1")).toEqual(1);
     });
 
+    it("can be called with 3 number and return 3", function () {
+        expect(stringCalc.add("3")).toEqual(3);
+    });
+
+    it("can be called with two numbers separated by comma and returns the sum of them", function () {
+        expect(stringCalc.add("1,2")).toEqual(3);
+    });
+
+    it("can be called with two numbers, 2 and 3 separated by comma and returns the sum of them", function () {
+        expect(stringCalc.add("2,3")).toEqual(5);
+    });
 
 });
